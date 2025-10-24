@@ -1,6 +1,5 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
-
 
 int main(){
 
@@ -21,8 +20,13 @@ int main(){
     cout << "direccion de memoria del array" << arr <<endl;
     cout << "direccion de memoria del punter" <<ptr <<endl;
 
+    int stackVar = 7;
+    int *heapVar = new int[2]{10,20};
+    cout << "direccion stackVar: " << &stackVar << endl;
+    cout << "direccion heapVar (inicio): " << heapVar << endl;
+
+    delete[] heapVar;
 
     return 0;
-
 
 }
